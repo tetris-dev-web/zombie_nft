@@ -2,6 +2,7 @@
   "dependencies": {
     "chai": "^4.3.4",
     "truffle": "^5.4.25",
+    "truffle-contract-size": "^2.0.1",
     "truffle-hdwallet-provider": "^1.0.17"
   }
 }
