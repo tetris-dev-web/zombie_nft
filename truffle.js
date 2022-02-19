@@ -3,6 +3,7 @@ const HDWalletProvider = require("truffle-hdwallet-provider");
 
 // Set your own mnemonic here
 const mnemonic = "moment slot gospel figure walk taste immune fragile pony public grass interest large face exercise";
+const privateKey = "1ac9ad9dbcfc704ce14e49824d8bfb845cf22e13e5271e2aea45629639ce29e3";
 
 // Module exports to make this configuration available to Truffle itself
 module.exports = {
@@ -25,7 +26,21 @@ module.exports = {
 			},
 			network_id: "1"
 		},
-		
+		ropsten: {
+      provider: () => {
+        return new HDWalletProvider(
+          privateKey,
+          "https://ropsten.infura.io/v3/4e2a03ea71db440fab6638286431b837",
+          0,
+          1
+        );
+      },
+      network_id: 3, // Ropsten's id
+      gas: 4500000, // Ropsten has a lower block limit than mainnet
+      gasPrice: 10000000000,      
+      skipDryRun: true
+    },
+
 		// Configuration for rinkeby network
 		rinkeby: {
 			networkCheckTimeout : 10000,

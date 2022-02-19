@@ -1,8 +1,8 @@
 {
   "dependencies": {
     "chai": "^4.3.4",
-    "truffle": "^5.4.25",
+    "truffle": "^4.1.14",
     "truffle-contract-size": "^2.0.1",
-    "truffle-hdwallet-provider": "^1.0.17"
+    "truffle-hdwallet-provider": "^1.0.0-web3one.5"
   }
 }
